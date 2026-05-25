@@ -7,7 +7,12 @@
 <meta name="description" content="Premium renovations, extensions & new builds on the Central Coast, Sydney & Hunter Region. Licensed builder Matt Reynolds. Call 0478 091 149.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#111111">
+<meta name="geo.region" content="AU-NSW">
+<meta name="geo.placename" content="Central Coast, New South Wales, Australia">
+<meta name="geo.position" content="-33.4300;151.3430">
+<meta name="ICBM" content="-33.4300, 151.3430">
 <link rel="canonical" href="https://elevatebuilding.net/">
+<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -15,6 +20,8 @@
 <meta property="og:title" content="Elevate Building & Contracting | Central Coast Builder">
 <meta property="og:description" content="Premium renovations, extensions & new builds on the Central Coast, Sydney & Hunter Region. Licensed builder Matt Reynolds.">
 <meta property="og:image" content="https://elevatebuilding.net/images/hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="Elevate Building & Contracting">
 
@@ -26,21 +33,72 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "GeneralContractor",
   "name": "Elevate Building & Contracting",
-  "description": "Premium renovations, extensions & new builds on the Central Coast, Sydney & Hunter Region.",
+  "description": "Premium renovations, extensions & new builds on the Central Coast, Sydney & Hunter Region. Licensed builder Matt Reynolds.",
   "url": "https://elevatebuilding.net",
   "telephone": "+61478091149",
   "email": "matt@elevatebuilding.net",
-  "areaServed": ["Central Coast", "Sydney", "Hunter Region"],
+  "areaServed": [
+    { "@type": "City", "name": "Gosford" },
+    { "@type": "City", "name": "Wyong" },
+    { "@type": "City", "name": "Terrigal" },
+    { "@type": "State", "name": "Central Coast, NSW" },
+    { "@type": "City", "name": "Sydney" },
+    { "@type": "City", "name": "Newcastle" }
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "NSW",
     "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -33.4300,
+    "longitude": 151.3430
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3",
+    "bestRating": "5",
+    "worstRating": "5"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Sarah & James T." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "Matt transformed our 1970s brick home into something we actually love living in. The quality of the finishes is genuinely exceptional — he wouldn't sign off until everything was perfect."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "David M." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "We had quotes from five builders. Matt's wasn't the cheapest, but it was the most detailed and honest. Twelve months later, we know we made the right call. The extension is flawless."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Kylie R." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "What stood out was that Matt was always on site, always reachable. No delays chasing someone down. The bathroom and kitchen came in on time, on budget, and it looks incredible."
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Building Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Renovations" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Extensions" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "New Home Builds" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Fitouts" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Outdoor & Decking" } }
+    ]
   },
   "sameAs": ["https://instagram.com/elevatebuilding_"],
   "hasCredential": {
@@ -48,6 +106,62 @@
     "credentialCategory": "NSW Builder Licence",
     "identifier": "395177C"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you handle DA and council approvals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We assist with Development Applications (DA) and Complying Development Certificates (CDC) for projects that require council approval. We work with trusted draftspeople and certifiers across the Central Coast to make the approval process as smooth as possible for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our primary service area is the Central Coast (from Gosford to Wyong and everywhere in between). We also take on select projects in the Sydney Metro and Hunter Region. Not sure if we cover your area? Give Matt a call — 0478 091 149."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical renovation take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It varies by scope. A bathroom renovation typically takes 2–4 weeks. A full house renovation is commonly 3–6 months. A new build is generally 9–14 months from slab to handover. We provide a detailed project timeline in your quote so there are no surprises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you licensed and insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Matt Reynolds holds NSW Builder Licence No. 395177C and carries comprehensive contractor's liability and home warranty insurance. All documentation is available on request before any work commences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I supply my own materials or fixtures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we're happy to work with fixtures or materials you've already sourced. We'll advise on lead times and suitability before installation. We also have trade accounts with suppliers across the Coast which can save you money."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your payment structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We follow the NSW Home Building Act guidelines for progress payments tied to construction milestones. Your contract will clearly outline every payment stage before you sign anything. No upfront lump sums — we earn each payment as the work is completed."
+      }
+    }
+  ]
 }
 </script>
 <style>
@@ -476,23 +590,23 @@
       <div class="proj-overlay"><span class="proj-label">Luxury Bathroom &mdash; Terrigal</span></div>
     </div>
     <div class="proj proj-med">
-      <img src="images/portfolio-ensuite.jpg" alt="Bathroom vanity with timber and brass fittings" loading="lazy" decoding="async">
+      <img src="images/portfolio-ensuite.jpg" alt="Ensuite renovation with timber vanity and brass fittings — Central Coast NSW builder" loading="lazy" decoding="async">
       <div class="proj-overlay"><span class="proj-label">Ensuite Renovation</span></div>
     </div>
     <div class="proj proj-med">
-      <img src="images/portfolio-slat-wall.jpg" alt="Timber feature slat wall living room" loading="lazy" decoding="async">
+      <img src="images/portfolio-slat-wall.jpg" alt="Timber feature slat wall — living room renovation Central Coast NSW" loading="lazy" decoding="async">
       <div class="proj-overlay"><span class="proj-label">Feature Slat Wall</span></div>
     </div>
     <div class="proj proj-med">
-      <img src="images/portfolio-bedroom.jpg" alt="Coastal bedroom renovation" loading="lazy" decoding="async">
+      <img src="images/portfolio-bedroom.jpg" alt="Coastal bedroom renovation — Central Coast NSW builder" loading="lazy" decoding="async">
       <div class="proj-overlay"><span class="proj-label">Coastal Bedroom</span></div>
     </div>
     <div class="proj proj-wide">
-      <img src="images/portfolio-kitchen.jpg" alt="Custom kitchen with stone island — new build" loading="lazy" decoding="async">
+      <img src="images/portfolio-kitchen.jpg" alt="Custom kitchen with stone island benchtop — new build Central Coast NSW" loading="lazy" decoding="async">
       <div class="proj-overlay"><span class="proj-label">Custom Kitchen &mdash; New Build</span></div>
     </div>
     <div class="proj proj-tall">
-      <img src="images/portfolio-avoca.jpg" alt="Elevate Building team on site" loading="lazy" decoding="async">
+      <img src="images/portfolio-avoca.jpg" alt="Elevate Building & Contracting team on site — Avoca Beach Central Coast builder" loading="lazy" decoding="async">
       <div class="proj-overlay"><span class="proj-label">On Site &mdash; Avoca Beach</span></div>
     </div>
     <div class="proj proj-large">
@@ -576,7 +690,7 @@
       </div>
       <div class="contact-detail">
         <span class="contact-detail-label">Instagram</span>
-        <a href="https://instagram.com/elevatebuilding_" target="_blank" class="contact-detail-value" style="font-size:17px">@elevatebuilding_</a>
+        <a href="https://instagram.com/elevatebuilding_" target="_blank" rel="noopener noreferrer" class="contact-detail-value" style="font-size:17px">@elevatebuilding_</a>
       </div>
       <div class="contact-detail">
         <span class="contact-detail-label">Service areas</span>
