@@ -122,8 +122,13 @@
 
   /* ── TRUST BAR ── */
   #trust-bar { background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 20px clamp(24px, 5vw, 80px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .trust-track { display: contents; }
   .trust-item { display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--silver); font-weight: 400; }
   .trust-icon { width: 20px; height: 20px; opacity: 0.5; flex-shrink: 0; }
+  @keyframes trust-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
 
   /* ── SECTION SHARED ── */
   section { padding: clamp(80px, 12vw, 160px) clamp(24px, 5vw, 80px); }
@@ -276,7 +281,9 @@
   @media (max-width: 560px) {
     .hero-h1 { font-size: 42px; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
-    #trust-bar { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 16px; -webkit-overflow-scrolling: touch; }
+    #trust-bar { overflow: hidden; padding: 16px 0; flex-wrap: nowrap; gap: 0; }
+    .trust-track { display: flex; flex-shrink: 0; animation: trust-scroll 22s linear infinite; will-change: transform; }
+    .trust-item { flex-shrink: 0; padding: 0 28px; border-right: 1px solid rgba(255,255,255,0.07); white-space: nowrap; }
     .process-steps { grid-template-columns: 1fr; }
     .process-step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 32px 0; }
     .process-step:last-child { border-bottom: none; }
@@ -384,25 +391,27 @@
 
 <!-- TRUST BAR -->
 <div id="trust-bar">
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-    Licensed &amp; Insured Builder
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-    Quality Finishes Guaranteed
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-    On-Time Project Delivery
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-    100% Owner-Operated
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    Residential &amp; Commercial
+  <div class="trust-track">
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      Licensed &amp; Insured Builder
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Quality Finishes Guaranteed
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      On-Time Project Delivery
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      100% Owner-Operated
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Residential &amp; Commercial
+    </div>
   </div>
 </div>
 
@@ -658,6 +667,14 @@
 
   const sp = document.getElementById('stickyPhone');
   window.addEventListener('scroll', () => sp.classList.toggle('visible', window.scrollY > window.innerHeight));
+
+  // Trust bar marquee — clone items so the loop is seamless
+  (function() {
+    if (window.innerWidth > 900) return;
+    const track = document.querySelector('.trust-track');
+    if (!track) return;
+    [...track.children].forEach(item => track.appendChild(item.cloneNode(true)));
+  })();
 
   function handleSubmit(e) {
     e.preventDefault();
