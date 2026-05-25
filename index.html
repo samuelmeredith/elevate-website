@@ -76,7 +76,9 @@
   /* ── NAV ── */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 clamp(24px, 5vw, 80px); height: 72px; display: flex; align-items: center; justify-content: space-between; background: transparent; transition: background 0.4s, border-bottom 0.4s; }
   nav.scrolled { background: rgba(17,17,17,0.97); border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .nav-logo { display: flex; flex-direction: column; gap: 1px; text-decoration: none; }
+  .nav-logo { display: flex; flex-direction: row; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo-icon { color: var(--white); flex-shrink: 0; }
+  .nav-logo-text { display: flex; flex-direction: column; gap: 1px; }
   .nav-logo-main { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; letter-spacing: 0.22em; font-size: 20px; color: var(--white); text-transform: uppercase; }
   .nav-logo-sub { font-size: 9px; letter-spacing: 0.24em; color: var(--silver); text-transform: uppercase; font-weight: 400; }
   .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
@@ -84,10 +86,17 @@
   .nav-links a:hover { color: var(--white); }
   .nav-cta { background: transparent !important; border: 1px solid rgba(200,184,138,0.5) !important; color: var(--gold) !important; padding: 8px 20px !important; letter-spacing: 0.18em !important; transition: background 0.2s, border-color 0.2s, color 0.2s !important; }
   .nav-cta:hover { background: var(--gold) !important; border-color: var(--gold) !important; color: var(--black) !important; }
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
-  .hamburger span { display: block; width: 24px; height: 1px; background: var(--silver-light); transition: all 0.3s; }
+  .hamburger { display: none; flex-direction: row; align-items: center; gap: 10px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .hamburger-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--silver); font-weight: 400; }
+  .hamburger-icon { display: flex; flex-direction: column; gap: 5px; }
+  .hamburger .bar { display: block; width: 22px; height: 1px; background: var(--silver-light); transition: all 0.3s; }
   .mobile-menu { display: none; position: fixed; inset: 0; background: rgba(17,17,17,0.98); z-index: 101; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
   .mobile-menu.open { display: flex; }
+  .mobile-menu-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .mobile-menu-logo-icon { color: var(--white); }
+  .mobile-menu-logo-text { display: flex; flex-direction: column; gap: 2px; }
+  .mobile-menu-logo-main { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase; color: var(--white); }
+  .mobile-menu-logo-sub { font-size: 9px; letter-spacing: 0.24em; color: var(--silver); text-transform: uppercase; }
   .mobile-menu a { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 300; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); text-decoration: none; transition: color 0.2s; }
   .mobile-menu a:hover { color: var(--gold); }
   .close-menu { position: absolute; top: 24px; right: 28px; background: none; border: none; color: var(--silver); font-size: 28px; cursor: pointer; line-height: 1; }
@@ -307,8 +316,14 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <span class="nav-logo-main">Elevate</span>
-    <span class="nav-logo-sub">Building &amp; Contracting</span>
+    <svg class="nav-logo-icon" viewBox="0 0 38 26" width="30" height="21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <polyline points="0,24 11,4 22,24"/>
+      <polyline points="14,24 26,1 38,24"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-main">Elevate</span>
+      <span class="nav-logo-sub">Building &amp; Contracting</span>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
@@ -318,12 +333,26 @@
     <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
+    <span class="hamburger-label">Menu</span>
+    <span class="hamburger-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </span>
   </button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <button class="close-menu" id="closeMenu" aria-label="Close">&#10005;</button>
+  <div class="mobile-menu-logo">
+    <svg class="mobile-menu-logo-icon" viewBox="0 0 38 26" width="34" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <polyline points="0,24 11,4 22,24"/>
+      <polyline points="14,24 26,1 38,24"/>
+    </svg>
+    <div class="mobile-menu-logo-text">
+      <span class="mobile-menu-logo-main">Elevate</span>
+      <span class="mobile-menu-logo-sub">Building &amp; Contracting</span>
+    </div>
+  </div>
   <a href="#services" class="menu-link">Services</a>
   <a href="#portfolio" class="menu-link">Projects</a>
   <a href="#about" class="menu-link">About</a>
